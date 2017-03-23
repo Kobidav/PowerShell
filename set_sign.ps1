@@ -24,7 +24,7 @@ Copy-Item ($Template_folder + "sign_template\t_e_m_p_l_a_t_e_files\*") -Destinat
 
 
 
-}
+} # Create Sing files from AD groups
 
 }
 Function Put_Data($Put_Name,$Put_Adv, $Put_Prof, $Put_mail, $Put_sid)
@@ -40,7 +40,7 @@ Copy-Item ($Template_folder + "sign_template\t_e_m_p_l_a_t_e_files\*") -Destinat
 
 
 
-   }
+   } # Create Sing fils manualy
 Function Send_Data
 {
 $d = [DateTime]::Today.AddDays(-60)
@@ -71,33 +71,12 @@ else
 else 
 { Write-Host "No Folder" $CompName $UserName} 
  }
- }
+ } # Send Files
 
 
 Get_Table 'legal clerks' ' ' 'Legal Intern'
 Get_Table 'advocates' ', Adv.' ' '
 Get_Table 'Partners all' ', Adv.' 'Partner'  
-Put_Data 'Orna Hingali' '' 'Financial Manager' 'orna_h@rmblaw.co.il' 'orna_h'
-Put_Data 'Main Reception' '' '' 'main_reception@rmblaw.co.il' 'main_reception'
-Put_Data 'Dafna Maor' '' 'Secretary' 'dafna_m@rmblaw.co.il' 'dafna_m'
-Put_Data 'Mariana Markush' '' 'Secretary' 'mariana_m@rmblaw.co.il' 'mariana_m'
-Put_Data 'Tal Halamish' '' 'Head of Archive' 'tal_h@rmblaw.co.il' 'tal_h'
-Put_Data 'Adi Levi' '' 'Billing Department' 'adi_l@rmblaw.co.il' 'adi_l'
-Put_Data 'Sofia Chloponin' '' 'Secretary' 'sofia_c@rmblaw.co.il' 'sofia_c'
-Put_Data 'Adina Galant' '' 'Secretary' 'adina_g@rmblaw.co.il' 'adina_g'
-Put_Data 'Neta Breuer' '' 'Secretary' 'neta_b@rmblaw.co.il' 'neta_b'
-Put_Data 'Iris Zimerman' ', Secretary' 'Personal Assistant to Adv. Einat Weidberg' 'iris_z@rmblaw.co.il' 'iris_z'
-Put_Data 'Meital Machluf' '' 'Accounting Department' 'meital_m@rmblaw.co.il' 'meital_m'
-Put_Data 'Orly Rahmian' ', Secretary' 'Personal Assistant to Adv. Joseph Benkel' 'orly_r@rmblaw.co.il' 'orly_r'
-Put_Data 'Mali Frayman' ' ' 'Personal Assistant to Adv. Yoram Raved' 'maly_f@rmblaw.co.il' 'mali_f'
-Put_Data 'Dekel Vaizer' ', Adv.' '' 'dekel_w@rmblaw.co.il' 'dekel_v'
-Put_Data 'Calanit Bar' ', Adv.' 'Partner' 'calanit_b@rmblaw.co.il' 'calanit_b'
-Put_Data 'Gital Rubin' '' 'Secretary' 'gital_r@rmblaw.co.il' 'gital_r'
-Put_Data 'Naomi Arnstein' '' 'Information Specialist' 'naomi_a@rmblaw.co.il' 'naomi_a'
-Put_Data 'Malka Levi' '' 'Real-Estate Department' 'malka_l@rmblaw.co.il' 'malka_l'
-Put_Data 'Suzy Ben Shoshan' '' 'Billing Department' 'suzy_b@rmblaw.co.il' 'suzy_b'
-Put_Data 'Shiri Elkabets' ', Secretary' '  Personal Assistant to Adv. Einat Weidberg' 'shiri_c@rmblaw.co.il' 'shiri_c'
-Put_Data 'Sigal Rozen-Rechav' ', Adv. CPA.' '' 'sigal_r@rmblaw.co.il' 'sigal_r'
-Put_Data 'Ilanit Bahrang' '' 'Real-Estate Department' 'ilanit_b@rmblaw.co.il' 'ilanit_b'
+
 
 #Send_Data
